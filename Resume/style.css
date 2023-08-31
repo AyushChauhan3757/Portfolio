@@ -322,3 +322,8 @@ button:hover {
   text-align: center;
   cursor: pointer;
 }
+
+.box { margin: 2px; float:left; padding-top: 100px;}
+#box1 { height: 1200px; width:  1000px;}
+#box2 { height: 700px; width:  650px;}
+#box3 { height: 300px; width:  360px;}
