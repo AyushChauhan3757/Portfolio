@@ -1,14 +1,188 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-</head>
-<body>
-    <h1>Portfolio</h1>
-    <a href="Amazon_Clone\Amazon.html">Amazon Clone</a>
-    <a href="Conversion\index.html">Unit Conversions</a>
-    <a href="index.html">Simple Interest</a>
-</body>
+<html>
+  <head>
+    <title>Ayush Chauhan - Portfolio</title>
+    <link rel="stylesheet" href="Resume\style.css"/>
+    <script src="Resume\script.js"></script>
+  </head>
+  <body>
+    <!-- Navigation Bar -->
+    <nav>
+      <div id="home">
+        <div class="profile_name">
+          Ayush Chauhan
+          <div class="contact_info">
+            <img src="Resume\html_finalprojimages\envelope.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          ayushc262@gmail.com.com
+        </div>
+        <div style="clear:both;"></div>
+        <div class="contact_info">
+          <img src="Resume\html_finalprojimages\phone.png" alt="https://icons8.com/icon/124377/circled-envelope"/>
+          +919870817597
+
+        </div>
+        </div>
+        <div class="topdiv">
+          <a class="topmenu" href="#about-me">About Me</a>
+          <!-- Add the links for Skills, Projects and Recommendation here -->
+
+        </div>
+      </div>    
+    </nav>
+
+    <!-- About Me -->
+    <section id="about-me" class="container">
+      <div>
+        <img src="https://cdn.dribbble.com/users/1162077/screenshots/3848914/programmer.gif" class="profile_image"/>
+      </div>
+
+      <div>
+          <h1>
+            Hi, I'm Ayush Chauhan! <img src="https://cdn.jsdelivr.net/npm/twemoji@11.0.1/2/svg/1f44b.svg" width="60px"/>
+          </h1>
+          <p>
+            I am currently pursuing B.Tech in Computer Science and Technology from Graphic Era Deemed to be University.
+            I am learning Full-Stack Web development, majorly focusing on the Frontend Development.
+          </p>
+      </div>
+    </section>
+              
+    <!-- Skills -->
+    <section id="skills">
+      <h2>Skills</h2>
+      <div style="clear:both;"></div>
+
+      <div class="all_skills">
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\html5.png"/>
+          <h6>HTML</h6>
+          <p>3 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\js.jpeg"/>
+          <h6>JavaScript</h6>
+          <p>1 years experience</p>
+        </div>  
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\C++.png"/>
+          <h6>C++</h6>
+          <p>3 years experience</p>
+        </div> 
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\c.png"/>
+          <h6>C</h6>
+          <p>2 years experience</p>
+        </div> 
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\python.jpeg"/>
+          <h6>Python</h6>
+          <p>3 years experience</p>
+        </div>
+        
+        <div class="skill">
+          <img src="html_finalprojimages\sql.png"/>
+          <h6>SQL</h6>
+          <p>3 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\sql.png"/>
+          <h6>Unity</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\unreal.png"/>
+          <h6>Unreal Engine</h6>
+          <p>2 years experience</p>
+        </div>
+
+        <div class="skill">
+          <img src="Resume\html_finalprojimages\java.png"/>
+          <h6>Java</h6>
+          <p>1 years experience</p>
+        </div>
+        <!-- Add more skills here -->
+
+      </div>
+    </section>
+          
+    <!-- Projects -->
+    <section class="projects" id="projects">
+      <h2>
+        Projects
+      </h2>
+      <div style="clear:both;"></div>
+
+        <div id="projects-container" class="projects-container">
+          <div class="project-card">
+            <h3>BreakOut Game--outline</h3>
+            <ul>
+              <li>Developed a clone of the classic Atari BreakOut</li>
+            </ul>
+          </div>
+          <hr>
+          <div class="project-card">
+            <h3>Amazon Clone - currently on-going</h3>
+            <ul>
+              <li>Currently creating a clone of the Amazon website</li>
+            </ul>
+          </div>
+          <hr>
+    </div>
+    </section>
+    <div style="clear:both;"></div>
+
+    <!-- Recommendations -->
+    <section id="recommendations">
+      <h2>Recommendations</h2>
+      <div style="clear:both;"></div>
+      <div class="all_recommendations" id="all_recommendations">
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Ayush is a very quick learner and quickly grasps key concepts of Web development. 
+          He got a great attitude & she is an excellent team player. 
+          He has a curious mind and asks the right question. 
+          He takes initiative within a team and has potentials to lead the team.
+          <span>&#8221;</span>
+        </div>
+        <div class="recommendation">
+          <span>&#8220;</span>
+          Working with Ayush has been an awesome experience. 
+          He is highly knowledgable and always goes the extra step to make sure everything is right. 
+          For any future projects that need his expertise I would definitely want to work with him again.
+          <span>&#8221;</span>
+        </div>
+      </div>
+    </section>
+
+    <!-- Recommendation Form -->
+    <section id="contact">
+      <div class="flex_center">
+        <fieldset>
+          <legend class="introduction">Leave a Recommendation</legend>          
+          <input type="text" placeholder="Name (Optional)"> <br/>
+          <textarea id="new_recommendation" cols="500" rows="10" placeholder="Message"></textarea>
+          <div class="flex_center">
+            <button id="recommend_btn" onclick="addRecommendation()">Submit</button>
+          </div>
+        </fieldset>
+      </div>
+    </section>
+
+    <div class="iconbutton">
+      <a href="#home">
+        <!--Add the code here for the logo to appear and the icon to be actionable-->
+      </a>
+    </div>
+
+    <div class="popup" id="popup" class="flex_center">
+      <img src="html_finalprojimages/checkmark--outline.svg"/>
+      <h3><!-- Add appropriate text here--></h3>
+      <button onclick="showPopup(false)">Ok</button>
+    </div>
+  </body>
 </html>
