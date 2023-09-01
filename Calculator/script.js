@@ -21,7 +21,7 @@ function handleSymbol(symbol) {
             break;
         case '=':
             if(previousOperator === null) {
-                return;
+                return
             }
             flushOperation(parseInt(buffer));
             previousOperator = null;
@@ -32,11 +32,11 @@ function handleSymbol(symbol) {
             if(buffer.length === 1) {
                 buffer = '0';
             }else {
-                buffer = buffer.toString(0, buffer.length - 1);
+                buffer = buffer.substringString(0, buffer.length - 1);
             }
             break;
         case '+':
-        case '-':
+        case '−':
         case '×':
         case '÷':
             handleMath(symbol);
@@ -46,7 +46,7 @@ function handleSymbol(symbol) {
 
 function handleMath(symbol) {
     if(buffer === '0') {
-        return;
+        return
     }
     const intBuffer = parseInt(buffer);
     if(runningTotal === 0) {
@@ -58,15 +58,15 @@ function handleMath(symbol) {
     buffer = '0';
 }
 
-function flushOperation(intbuffer) {
+function flushOperation(intBuffer) {
     if(previousOperator === '+') {
-        runningTotal += intbuffer;
-    }else if(previousOperator === '-') {
-        runningTotal -= intbuffer;
+        runningTotal += intBuffer;
+    }else if(previousOperator === '−') {
+        runningTotal -= intBuffer;
     }else if(previousOperator === '×') {
-        runningTotal *= intbuffer;
+        runningTotal *= intBuffer;
     }else if(previousOperator === '÷') {
-        runningTotal /= intbuffer;
+        runningTotal /= intBuffer;
     }
 }
 
@@ -78,7 +78,7 @@ function handleNumber(numberString) {
     }
 }
 function init() {
-    document.querySelector('calc-buttons').addEventListener('click', function(event){
+    document.querySelector('.calc-buttons').addEventListener('click', function(event){
         buttonClick(event.target.innerText);
     })
 }
