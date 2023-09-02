@@ -7,6 +7,13 @@
   <link rel="stylesheet" href="Resume\style.css">
   <link rel="stylesheet" href="Resume\skins\color-1.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+  <!-- Style Switcher -->
+  <link rel="stylesheet" href="Resume\skins\color-1.css" class="alternate-style" title="color-1" disabled>
+  <link rel="stylesheet" href="Resume\skins\color-2.css" class="alternate-style" title="color-2" disabled>
+  <link rel="stylesheet" href="Resume\skins\color-3.css" class="alternate-style" title="color-3" disabled>
+  <link rel="stylesheet" href="Resume\skins\color-4.css" class="alternate-style" title="color-4" disabled>
+  <link rel="stylesheet" href="Resume\skins\color-5.css" class="alternate-style" title="color-5" disabled>
+  <link rel="stylesheet" href="Resume\style-switcher.css">
   <title>My Resume</title>
 </head>
 <body>
@@ -32,14 +39,14 @@
     <!-- Main Content Start -->
     <div class="main-content">
       <!-- Home Section Start -->
-      <section id="home" class="home section">
+      <section id="home" class="home active section">
         <div class="container">
           <div class="row">
             <div class="home-info padd-15">
               <h3 class="hello">Hello, my name is <span class="name">Ayush Chauhan</span></h3>
               <h3 class="my-profession">I'm a <span class="typing">Front-End Developer</span></h3>
               <p>I'm a Passionate Front-End Developer with a flair for creating seamless, user-friendly web experiences that merge design aesthetics with cutting-edge technology.</p>
-              <a href="#contact" class="btn hire-me">Hire me</a>
+              <a href="#" class="btn">Download CV</a>
             </div>
             <div class="home-img padd-15">
               <img src="Resume\Images\me.jpg" alt="">
@@ -94,8 +101,7 @@
                   </div>
                   <div class="row">
                     <div class="buttons padd-15">
-                      <a href="#" class="btn">Download CV</a>
-                      <a href="#contact" class="btn hire-me">Hire Me</a>
+                      <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
                     </div>
                   </div>
                 </div>
@@ -441,7 +447,6 @@
               </div>
             </div>
           </div>
-          
         </div>
       </section>
       <!-- Contact Section End -->
@@ -449,7 +454,27 @@
     <!-- Main Content End -->
   </div>
   <!-- Main Container End -->
+  <!-- Style Switcher Start -->
+  <div class="style-switcher">
+    <div class="style-switcher-toggler s-icon">
+      <i class="fas fa-cog fa-spin"></i>
+    </div>
+    <div class="day-night s-icon">
+      <i class="fas "></i>
+    </div>
+    <h4>Theme Colors</h4>
+    <div class="colors">
+      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+    </div>
+  </div>
+  <!-- Style Switcher End -->
   <!-- JS Files -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js" referrerpolicy="no-referrer"></script>
   <script src="Resume\script.js"></script>
+  <script src="Resume\style-switcher.js"></script>
 </body>
 </html>
