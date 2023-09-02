@@ -195,7 +195,9 @@ function updateScore() {
     document.getElementById("score").textContent = "Score: " + player.score;
 }
 document.addEventListener("keydown", (event) => {
-    if(event.keyCode === 37){
+    if (event.keyCode === 13) {
+        startGame();
+    }else if(event.keyCode === 37){
         playerMove(-1);
     }else if(event.keyCode === 39){
         playerMove(1);
@@ -224,6 +226,10 @@ const player = {
     score: 0,
 };
 
-playerReset();
-updateScore();
-update();
+function startGame() {
+    playerReset();
+    updateScore();
+    update(); // Start the game loop.
+}
+
+startGame();
