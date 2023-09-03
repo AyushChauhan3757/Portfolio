@@ -161,39 +161,6 @@ ul { list-style: none;}
   text-transform: capitalize;
 }
 
-.aside .logo a {
-  color: var(--text-black-900);
-  font-weight: 700;
-  padding: 15px 20px;
-  font-size: 30px;
-  letter-spacing: 5px;
-  position: relative;
-}
-
-.aside .logo a span { font-family: 'Clicker Script', cursive; font-size: 40px;}
-
-.aside .logo a::before {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-bottom: 5px solid var(--skin-color);
-  border-left: 5px solid var(--skin-color);
-  bottom: 0;
-  left: 0;
-}
-
-.aside .logo a::after {
-  content: '';
-  position: absolute;
-  width: 20px;
-  height: 20px;
-  border-top: 5px solid var(--skin-color);
-  border-right: 5px solid var(--skin-color);
-  top: 0;
-  right: 0;
-}
-
 .aside .nav-toggler {
   height: 40px;
   width: 45px;
@@ -808,28 +775,4 @@ header h2 {
 }
 .chat-input textarea:valid ~ span {
   visibility: visible;
-}
-
-/* @media (max-width: 490px) {
-  .chatbot-toggler {
-    right: 20px;
-    bottom: 20px;
-  }
-  .chatbot {
-    right: 0;
-    bottom: 0;
-    height: 100%;
-    border-radius: 0;
-    width: 100%;
-  }
-  .chatbot .chatbox {
-    height: 90%;
-    padding: 25px 15px 100px;
-  }
-  .chatbot .chat-input {
-    padding: 5px 15px;
-  }
-  .chatbot header span {
-    display: block;
-  } */
 }

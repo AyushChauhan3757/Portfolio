@@ -1,45 +1,41 @@
 /* Import Google font - Poppins */
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600&display=swap');
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: "Poppins", sans-serif;
-}
-body {
-  background: #E3F2FD;
-}
-.chatbot-toggler {
-  position: fixed;
-  bottom: 30px;
-  right: 35px;
-  outline: none;
-  border: none;
-  height: 50px;
-  width: 50px;
-  display: flex;
-  cursor: pointer;
-  align-items: center;
-  justify-content: center;
-  border-radius: 50%;
-  background: #724ae8;
-  transition: all 0.2s ease;
-  z-index: 101;
-}
-body.show-chatbot .chatbot-toggler {
-  transform: rotate(90deg);
-}
-.chatbot-toggler span {
-  color: #fff;
-  position: absolute;
-}
-.chatbot-toggler span:last-child,
-body.show-chatbot .chatbot-toggler span:first-child  {
-  opacity: 0;
-}
-body.show-chatbot .chatbot-toggler span:last-child {
-  opacity: 1;
-}
+
+.aside .logo button {
+    color: var(--text-black-900);
+    background-color: var(--bg-black-700);
+    font-weight: 700;
+    padding: 15px 20px;
+    font-size: 30px;
+    letter-spacing: 5px;
+    position: relative;
+    border: none;
+  }
+  
+  .aside .logo button span { font-family: 'Clicker Script', cursive; font-size: 40px;}
+  
+  .aside .logo button::before {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-bottom: 5px solid var(--skin-color);
+    border-left: 5px solid var(--skin-color);
+    bottom: 0;
+    left: 0;
+  }
+  
+  .aside .logo button::after {
+    content: '';
+    position: absolute;
+    width: 20px;
+    height: 20px;
+    border-top: 5px solid var(--skin-color);
+    border-right: 5px solid var(--skin-color);
+    top: 0;
+    right: 0;
+  }
+
 .chatbot {
   position: fixed;
   right: 35px;
@@ -172,10 +168,6 @@ header h2 {
 }
 
 @media (max-width: 490px) {
-  .chatbot-toggler {
-    right: 20px;
-    bottom: 20px;
-  }
   .chatbot {
     right: 0;
     bottom: 0;
