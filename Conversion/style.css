@@ -102,15 +102,15 @@ button:hover {
     display: flex;
 }
 
-.temperature{
+.temp{
     border-top-color: green;
 }
 
-.weight{
+.weig{
     border-top-color: coral;
 }
 
-.distance{
+.dist{
     border-top-color: cyan;
 
 }
