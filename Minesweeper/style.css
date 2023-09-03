@@ -1,0 +1,51 @@
+/* Overall styling for the webpage body */
+body {
+    background-color: #263238; /* Background color */
+    color: #ddd; /* Text color */
+    font-family: courier; /* Font family for text */
+    display: grid; /* Using a grid layout for content */
+    align-content: center; /* Center align content vertically */
+    justify-content: center; /* Center align content horizontally */
+    height: 100vh; /* Set the height of the body to 100% of the viewport height */
+    overflow: hidden; /* Hide any content that overflows */
+}
+
+/* Styling for the page heading */
+h1 {
+    font-size: 14pt; /* Font size */
+    font-weight: normal; /* Font weight */
+}
+
+/* Styling for the game grid */
+#grid {
+    margin-left: auto; /* Auto left margin for centering */
+    margin-right: auto; /* Auto right margin for centering */
+}
+
+/* Styling for individual grid cells */
+#grid tr td {
+    border: 1px solid #fff; /* White border around cells */
+    background-color: #999; /* Background color of cells */
+    width: 20px; /* Width of cells */
+    height: 20px; /* Height of cells */
+    text-align: center; /* Center align text within cells */
+}
+
+/* Styling for active (clicked) cells */
+#grid tr td.active {
+    background-color: #333; /* Background color for active cells */
+}
+
+/* Styling for cells with mines */
+#grid tr td.mine {
+    background-color: #d84315; /* Background color for cells with mines */
+}
+
+/* Styling for buttons */
+button {
+    margin: 12px 0; /* Margin around buttons */
+    padding: 4px 0; /* Padding within buttons */
+    border: none; /* Remove button borders */
+    outline: none; /* Remove button outlines */
+    cursor: pointer; /* Set cursor to pointer for buttons */
+}
