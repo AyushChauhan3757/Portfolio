@@ -1,12 +1,14 @@
+/* Set the background color, text color, font family, font size, and text alignment for the entire page */
 body {
-    background: #202020;
-    color: #fff;
-    font-family: sans-serif;
-    font-size: 2em;
-    text-align: center;
+    background: #202020; /* Background color */
+    color: #fff; /* Text color */
+    font-family: sans-serif; /* Font family */
+    font-size: 2em; /* Font size */
+    text-align: center; /* Text alignment */
 }
 
+/* Style for the canvas element */
 canvas {
-    border: solid 0.2em #fff;
-    height: 90vh;
+    border: solid 0.2em #fff; /* Add a white border to the canvas */
+    height: 90vh; /* Set the canvas height to 90% of the viewport height */
 }
