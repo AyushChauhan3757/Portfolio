@@ -12,7 +12,7 @@ body {
 
 /* Styling for the page heading */
 h1 {
-    font-size: 14pt; /* Font size */
+    font-size: 28pt; /* Font size */
     font-weight: normal; /* Font weight */
 }
 
@@ -26,8 +26,8 @@ h1 {
 #grid tr td {
     border: 1px solid #fff; /* White border around cells */
     background-color: #999; /* Background color of cells */
-    width: 20px; /* Width of cells */
-    height: 20px; /* Height of cells */
+    width: 40px; /* Width of cells */
+    height: 40px; /* Height of cells */
     text-align: center; /* Center align text within cells */
 }
 
@@ -44,8 +44,9 @@ h1 {
 /* Styling for buttons */
 button {
     margin: 12px 0; /* Margin around buttons */
-    padding: 4px 0; /* Padding within buttons */
+    padding: 10px 0; /* Padding within buttons */
     border: none; /* Remove button borders */
+    font-size: 20px; /* Font Size */
     outline: none; /* Remove button outlines */
     cursor: pointer; /* Set cursor to pointer for buttons */
 }
