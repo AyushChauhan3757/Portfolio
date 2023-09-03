@@ -12,8 +12,9 @@ body {
 
 /* Styling for the page heading */
 h1 {
-    font-size: 28pt; /* Font size */
+    font-size: 32pt; /* Font size adjusted */
     font-weight: normal; /* Font weight */
+    text-align: center; /* Center align the heading text */
 }
 
 /* Styling for the game grid */
