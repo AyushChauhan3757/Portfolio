@@ -1,3 +1,4 @@
+/* Reset some default styles and set up the box model */
 html {
     box-sizing: border-box;
     height: 100%;
@@ -6,11 +7,12 @@ html {
 *,
 *::before,
 *::after {
-    box-sizing:inherit;
+    box-sizing: inherit;
     margin: 0;
     padding: 0;
 }
 
+/* Styling for the entire page */
 body {
     align-items: center;
     background: linear-gradient(320deg, #eb92be, #ffef78, #63c9b4);
@@ -20,6 +22,7 @@ body {
     justify-content: center;
 }
 
+/* Styling for the main wrapper */
 .wrapper {
     backdrop-filter: blur(4px);
     -weblit-backdrop-filter: blur(4px);
@@ -33,6 +36,7 @@ body {
     padding: 20px 35px;
 }
 
+/* Styling for the calculator screen */
 .screen {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -48,12 +52,14 @@ body {
     width: 326px;  
 }
 
+/* Styling for calculator button rows */
 .calc-button-row {
     display: flex;
     justify-content: space-between;
     margin: 5% 0;
 }
 
+/* Styling for individual calculator buttons */
 .calc-button {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -67,6 +73,8 @@ body {
     font-size: 24px;
     height: 65px;
 }
+
+/* Styling for the last calculator button (equals button) */
 .calc-button:last-child {
     backdrop-filter: blur(5.5px);
     -webkit-backdrop-filter: blur(5.5px);
@@ -77,10 +85,18 @@ body {
     color: #fff;
     background: #d72880;
 }
-.calc-button:last-child:hover { background-color: inherit; color: inherit;}
-.calc-button:hover { background-color: inherit;}
-.calc-button:active { background-color: #ffef78;}
 
-.double { flex-basis: 47%;}
+/* Styling for the last calculator button on hover (equals button) */
+.calc-button:last-child:hover { background-color: inherit; color: inherit; }
 
-.triple { flex-basis: 73%;}
+/* Styling for calculator buttons on hover */
+.calc-button:hover { background-color: inherit; }
+
+/* Styling for calculator buttons on click (active state) */
+.calc-button:active { background-color: #ffef78; }
+
+/* Styling for double-width calculator buttons */
+.double { flex-basis: 47%; }
+
+/* Styling for triple-width calculator buttons */
+.triple { flex-basis: 73%; }
