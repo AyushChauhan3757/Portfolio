@@ -1,0 +1,212 @@
+/* Reset default margin, padding, border, outline, and use border-box for box-sizing */
+* {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: none;
+    box-sizing: border-box;
+}
+
+/* Styling for the body element */
+body {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #06283D;
+}
+
+/* Main container for the weather app */
+.container {
+    position: relative;
+    width: 400px;
+    height: 105px;
+    background: #fff;
+    padding: 28px 32px;
+    overflow: hidden;
+    border-radius: 18px;
+    font-family: 'Roboto', sans-serif;
+    transition: 0.6s ease-out;
+}
+
+/* Styling for the search box section */
+.search-box {
+    width: 100%;
+    height: min-content;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+/* Styling for the input field in the search box */
+.search-box input {
+    color: #06283D;
+    width: 80%;
+    font-size: 24px;
+    font-weight: 500;
+    text-transform: uppercase;
+    padding-left: 32px;
+}
+
+/* Styling for the input field's placeholder text */
+.search-box input::placeholder {
+    font-size: 20px;
+    font-weight: 500;
+    color: #06283D;
+    text-transform: capitalize;
+}
+
+/* Styling for the search button */
+.search-box button {
+    cursor: pointer;
+    width: 50px;
+    height: 50px;
+    color: #06283D;
+    background: #dff6ff;
+    border-radius: 50%;
+    font-size: 22px;
+    transition: 0.4s ease;
+}
+
+/* Hover effect for the search button */
+.search-box button:hover {
+    color: #fff;
+    background: #06283D;
+}
+
+/* Styling for the search icon */
+.search-box i {
+    position: absolute;
+    color: #06283D;
+    font-size: 28px;
+}
+
+/* Styling for the weather box section */
+.weather-box {
+    text-align: center;
+}
+
+/* Styling for the weather image */
+.weather-box img {
+    width: 60%;
+    margin-top: 30px;
+}
+
+/* Styling for the temperature display */
+.weather-box .temperature {
+    position: relative;
+    color: #06283D;
+    font-size: 4rem;
+    font-weight: 800;
+    margin-top: 30px;
+    margin-left: -16px;
+}
+
+/* Styling for the temperature unit */
+.weather-box .temperature span {
+    position: absolute;
+    margin-left: 4px;
+    font-size: 1.5rem;
+}
+
+/* Styling for the weather description */
+.weather-box .description {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    text-transform: capitalize;
+}
+
+/* Styling for the weather details section */
+.weather-details {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+/* Styling for humidity and wind details sections */
+.weather-details .humidity,
+.weather-details .wind {
+    display: flex;
+    align-items: center;
+    width: 50%;
+    height: 100px;
+}
+
+/* Styling for the humidity section */
+.weather-details .humidity {
+    padding-left: 20px;
+    justify-content: flex-start;
+}
+
+/* Styling for the wind section */
+.weather-details .wind {
+    padding-right: 20px;
+    justify-content: flex-end;
+}
+
+/* Styling for icons in weather details */
+.weather-details i {
+    color: #06283D;
+    font-size: 26px;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+/* Styling for text and values in weather details */
+.weather-details span {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Styling for additional text in weather details */
+.weather-details p {
+    color: #06283D;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+/* Styling for the "Not Found" section */
+.not-found {
+    width: 100%;
+    text-align: center;
+    margin-top: 50px;
+    scale: 0;
+    opacity: 0;
+    display: none;
+}
+
+/* Styling for the "Not Found" image */
+.not-found img {
+    width: 70%;
+}
+
+/* Styling for the error message in the "Not Found" section */
+.not-found p {
+    color: #06283D;
+    font-size: 22px;
+    font-weight: 500;
+    margin-top: 12px;
+}
+
+/* Initial animation settings for weather box and details */
+.weather-box, .weather-details {
+    scale: 0;
+    opacity: 0;
+}
+
+/* Fade-in animation */
+.fadeIn {
+    animation: 0.5s fadeIn forwards;
+    animation-delay: 0.5s;
+}
+
+/* Keyframes for the fade-in animation */
+@keyframes fadeIn {
+    to {
+        scale: 1;
+        opacity: 1;
+    }
+}

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Include Google Fonts for Poppins and Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&family=Roboto:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
+    <!-- Include external stylesheet -->
+    <link rel="stylesheet" href="style.css">
+    <!-- Title for the web page -->
+    <title>Day #10 - Weather App | AsmrProg</title>
+</head>
+
+<body>
+    <!-- Main container for the weather app -->
+    <div class="container">
+        <!-- Search box for entering location -->
+        <div class="search-box">
+            <!-- Icon for location -->
+            <i class="fa-solid fa-location-dot"></i>
+            <!-- Input field for location -->
+            <input type="text" placeholder="Enter your location">
+            <!-- Button to initiate the search -->
+            <button class="fa-solid fa-magnifying-glass"></button>
+        </div>
+
+        <!-- Displayed when the location is not found -->
+        <div class="not-found">
+            <!-- Image for the 404 error -->
+            <img src="images/404.png">
+            <!-- Error message for invalid location -->
+            <p>Oops! Invalid location :/</p>
+        </div>
+
+        <!-- Weather information display box -->
+        <div class="weather-box">
+            <!-- Image to represent weather conditions -->
+            <img src="">
+            <!-- Temperature display -->
+            <p class="temperature"></p>
+            <!-- Weather description -->
+            <p class="description"></p>
+        </div>
+
+        <!-- Additional weather details -->
+        <div class="weather-details">
+            <!-- Humidity information -->
+            <div class="humidity">
+                <!-- Icon for humidity -->
+                <i class="fa-solid fa-water"></i>
+                <!-- Text for humidity -->
+                <div class="text">
+                    <!-- Actual humidity value -->
+                    <span></span>
+                    <!-- Label for humidity -->
+                    <p>Humidity</p>
+                </div>
+            </div>
+            <!-- Wind speed information -->
+            <div class="wind">
+                <!-- Icon for wind -->
+                <i class="fa-solid fa-wind"></i>
+                <!-- Text for wind speed -->
+                <div class="text">
+                    <!-- Actual wind speed value -->
+                    <span></span>
+                    <!-- Label for wind speed -->
+                    <p>Wind Speed</p>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <!-- Include Font Awesome JavaScript library -->
+    <script src="https://kit.fontawesome.com/7c8801c017.js" crossorigin="anonymous"></script>
+    <!-- Include custom JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
