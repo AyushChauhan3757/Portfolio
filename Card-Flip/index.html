@@ -4,27 +4,20 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Card-Flip</title>
-    <!-- Link to an external CSS file -->
     <link rel="stylesheet" href="style.css">
-    <!-- Link to an external CSS library (boxicons) -->
     <link href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css" rel="stylesheet">
 </head>
 <body>
     <div class="wrapper">
         <ul class="cards">
-            <!-- Start of Card List -->
-            <!-- Each card has a front and back view -->
             <li class="card">
                 <div class="view front-view">
-                    <!-- Front view of the card with a question mark icon -->
                     <i class="bx bx-question-mark"></i>
                 </div>
                 <div class="view back-view">
-                    <!-- Back view of the card with a TikTok icon -->
                     <i class="bx bxl-tiktok"></i>
                 </div>
             </li>
-            <!-- Repeat the above card structure for different social media icons -->
             <li class="card">
                 <div class="view front-view">
                     <i class="bx bx-question-mark"></i>
@@ -113,20 +106,16 @@
                     <i class="bx bxl-youtube"></i>
                 </div>
             </li>
-            <!-- Details section below the cards -->
+
             <div class="details">
-                <!-- Display the time with a placeholder value of 0s -->
                 <p class="time">Time : <span><b>0</b>s</span></p>
-                <!-- Display the number of flips with a placeholder value of 0 -->
                 <p class="flips">Flips : <span><b>0</b></span></p>
-                <!-- Button to refresh the cards -->
                 <button>Refresh</button>
             </div>
-            <!-- End of Card List -->
         </ul>
+        
     </div>
 
-    <!-- Include an external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
