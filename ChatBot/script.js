@@ -21,53 +21,60 @@ function sendMessage() {
     else if (message === 'developer') {
         // clear input value
         userInput.value = '';
-        // append message as user - we will code it's function
+        // append message as user - we will code its function
         appendMessage('user', message);
-        // sets a fake timeout that showing loading on send button
+        // sets a fake timeout that shows loading on the send button
         setTimeout(() => {
-            // send our message as bot(sender : bot)
-            appendMessage('bot', 'This Source Coded By Ayush Chauhan \nPhone: +91 9870817597 \n Email:ayushc262@gmail.com');
+            // send our message as bot (sender: bot)
+            appendMessage('bot', 'This Source Coded By Ayush Chauhan \nPhone: +91 9870817597 \n Email: ayushc262@gmail.com');
             // change button icon to default
             buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
             buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
-        }, 2000);
+        }, 2000); // Adjust the delay duration (in milliseconds) as needed
         return;
     }
 
-    // else if none of above
-    // appends users message to screen
+    // else if none of the above
+    // appends the user's message to the screen
     appendMessage('user', message);
     userInput.value = '';
 
-    const options = {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
-            'Authorization': 'Bearer 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',
-        },
-        body: JSON.stringify({
-            model: 'gpt-3.5-turbo',
-            messages: [
-                { role: 'system', content: 'You are a helpful assistant.' },
-                { role: 'user', content: 'Whats the weather like today?' },
-            ],
-            max_tokens: 50, // Adjust as needed
-        }),
-    };
-    // official api : ;
-    fetch('https://api.openai.com/v1/engines/davinci/completions', options).then((response) => response.json()).then((response) => {
-        appendMessage('bot', response.choices[0].message.content);
+    // Simulate a delay before making the API request (e.g., 2 seconds)
+    setTimeout(() => {
+        const options = {
+            method: 'POST',
+            headers: {
+                'Content-Type': 'application/json',
+                'Authorization': 'Bearer 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',
+            },
+            body: JSON.stringify({
+                model: 'gpt-3.5-turbo',
+                messages: [
+                    { role: 'system', content: 'You are a helpful assistant.' },
+                    { role: 'user', content: message }, // Use the user's message here
+                ],
+                max_tokens: 50, // Adjust as needed
+            }),
+        };
+        // Make the API request after the timeout
+        fetch('https://api.openai.com/v1/engines/davinci/completions', options)
+            .then((response) => response.json())
+            .then((response) => {
+                appendMessage('bot', response.choices[0].message.content);
 
-        buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
-        buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
-    }).catch((err) => {
-        if (err.name === 'TypeError') {
-            appendMessage('bot', 'Error : Check Your Api Key!');
-            buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
-            buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
-        }
-    });
+                buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
+                buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
+            })
+            .catch((err) => {
+                if (err.name === 'TypeError') {
+                    appendMessage('bot', 'Error: Check Your API Key!');
+                    buttonIcon.classList.add('fa-solid', 'fa-paper-plane');
+                    buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
+                }
+            });
+    }, 5000); // Adjust the delay duration (in milliseconds) as needed
 }
+
 
 function appendMessage(sender, message) {
     info.style.display = "none";
