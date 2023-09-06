@@ -4,35 +4,52 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Music-App</title>
+    <!-- Include external stylesheet -->
     <link rel="stylesheet" href="style.css">
+    <!-- Include Font Awesome stylesheet from CDN -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
 </head>
 <body>
+    <!-- Background container -->
     <div class="background">
-        <img src="assets/1.jpg" id="bg-image">
+        <!-- Blank image for background -->
+        <img alt="Blank Image" id="bg-image">
     </div>
+    <!-- Main container -->
     <div class="container">
+        <!-- Player image container -->
         <div class="player-img">
-            <img src="assets/1.jpg" class="active" id="cover">
+            <!-- Blank image for player -->
+            <img alt="Blank Image" class="active" id="cover">
         </div>
 
+        <!-- Music title -->
         <h2 id="music-title">Test</h2>
+        <!-- Music artist -->
         <h3 id="music-artist">Test h2</h3>
 
+        <!-- Player progress bar container -->
         <div class="player-progress" id="player-progress">
+            <!-- Progress bar -->
             <div class="progress" id="progress"></div>
+            <!-- Music duration and current time display -->
             <div class="music-duration">
                 <span id="current-time">0:00</span>
                 <span id="duration">0:00</span>
             </div>
         </div>
 
+        <!-- Player controls -->
         <div class="player-controls">
-            <i class="fa-solid fa-backward" title="Previous"></i>
-            <i class="fa-solid fa-play play-button" title="Play"></i>
-            <i class="fa-solid fa-forward" title="Next"></i>
+            <!-- Previous track button -->
+            <i class="fa-solid fa-backward" title="Previous" id="prev"></i>
+            <!-- Play/pause button -->
+            <i class="fa-solid fa-play play-button" title="Play" id="play"></i>
+            <!-- Next track button -->
+            <i class="fa-solid fa-forward" title="Next" id="next"></i>
         </div>
     </div>
+    <!-- Include external JavaScript file -->
     <script src="script.js"></script>
 </body>
 </html>
