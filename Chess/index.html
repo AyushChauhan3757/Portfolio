@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" /> <!-- Include your custom CSS styles -->
+    <link rel="stylesheet" href="css/chessboard-1.0.0.min.css" /> <!-- Include Chessboard.js CSS -->
+    <title>Chess</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>Chess Game</h1>
+        <div class="board" id="board"></div> <!-- The container for the chessboard -->
+        <div class="buttons">
+            <button class="play-again">Play Again</button> <!-- Button to start a new game -->
+            <button class="set-pos">Set Position</button> <!-- Button to set a custom position -->
+            <button class="flip-board">Flip Board</button> <!-- Button to flip the board -->
+        </div>
+        <div id="move-history" class="move-history"></div> <!-- Display move history here -->
+    </div>
+
+    <!-- Include jQuery library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
+
+    <!-- Include Chessboard.js library -->
+    <script src="js/chessboard-1.0.0.min.js"></script>
+
+    <!-- Include Chess.js library for chess logic -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/chess.js/0.10.3/chess.min.js"></script>
+
+    <!-- Include your custom JavaScript code for the chess game -->
+    <script src="script.js"></script>
+</body>
+</html>

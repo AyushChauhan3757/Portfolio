@@ -1,0 +1,77 @@
+/* Import the "Poppins" font from Google Fonts */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+/* Reset default styles and set the font-family to "Poppins" for the entire page */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+/* Style the body element */
+body {
+  height: 100vh; /* Make the body cover the full viewport height */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #f2f2f2; /* Set a light background color */
+}
+
+/* Style the main container */
+.container {
+  background-color: #fff; /* Set a white background color */
+  padding: 2rem;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2); /* Add a subtle box shadow */
+}
+
+/* Style the heading */
+h1 {
+  text-align: center; /* Center-align the heading */
+  font-weight: 500; /* Apply a medium font weight */
+}
+
+/* Style the chessboard */
+.board {
+  width: 400px;
+  margin: 20px auto; /* Center-align the chessboard */
+}
+
+/* Style the buttons container */
+.buttons {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center; /* Center-align the buttons horizontally */
+  gap: 10px;
+}
+
+/* Style the buttons */
+button {
+  color: #fff; /* Text color */
+  background-color: #000; /* Background color */
+  border: none;
+  width: 120px;
+  height: 40px;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: all 0.3s ease; /* Add a smooth transition effect */
+}
+
+/* Style the buttons on hover */
+button:hover {
+  background-color: #434343; /* Darken the background color on hover */
+}
+
+/* Style the move history container */
+.move-history {
+  margin-top: 20px;
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 5px;
+  height: 100px;
+  width: 400px;
+  overflow-y: scroll; /* Add a vertical scrollbar for overflow content */
+  background-color: #f2f2f2; /* Set a light background color */
+}

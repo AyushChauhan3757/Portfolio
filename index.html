@@ -1,569 +1,724 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <!-- CSS Files -->
-  <link rel="stylesheet" href="Resume\style.css">
-  <link rel="stylesheet" href="Resume\skins\color-1.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-  <!-- Style Switcher -->
-  <link rel="stylesheet" href="Resume\skins\color-1.css" class="alternate-style" title="color-1" disabled>
-  <link rel="stylesheet" href="Resume\skins\color-2.css" class="alternate-style" title="color-2" disabled>
-  <link rel="stylesheet" href="Resume\skins\color-3.css" class="alternate-style" title="color-3" disabled>
-  <link rel="stylesheet" href="Resume\skins\color-4.css" class="alternate-style" title="color-4" disabled>
-  <link rel="stylesheet" href="Resume\skins\color-5.css" class="alternate-style" title="color-5" disabled>
-  <link rel="stylesheet" href="Resume\style-switcher.css">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="Resume\style.css" />
+    <link rel="stylesheet" href="Resume\skins\color-1.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+    />
+    <!-- Style Switcher -->
+    <link
+      rel="stylesheet"
+      href="Resume\skins\color-1.css"
+      class="alternate-style"
+      title="color-1"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="Resume\skins\color-2.css"
+      class="alternate-style"
+      title="color-2"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="Resume\skins\color-3.css"
+      class="alternate-style"
+      title="color-3"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="Resume\skins\color-4.css"
+      class="alternate-style"
+      title="color-4"
+      disabled
+    />
+    <link
+      rel="stylesheet"
+      href="Resume\skins\color-5.css"
+      class="alternate-style"
+      title="color-5"
+      disabled
+    />
+    <link rel="stylesheet" href="Resume\style-switcher.css" />
 
-  <!-- Add these links to include the chatbot styles and scripts -->
-<link rel="stylesheet" href="Resume/chatstyle.css"> <!-- Your existing styles -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
-<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0" />
-<script src="Resume/chatscript.js" defer></script> <!-- Your existing scripts -->
+    <!-- Add these links to include the chatbot styles and scripts -->
+    <link rel="stylesheet" href="Resume/chatstyle.css" />
+    <!-- Your existing styles -->
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0"
+    />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@48,400,1,0"
+    />
+    <script src="Resume/chatscript.js" defer></script>
+    <!-- Your existing scripts -->
 
-  <title>My Resume</title>
-</head>
-<body>
-  <!-- Main Container Start -->
-  <div class="main-container">
-    <!-- Aside Start -->
-    <div class="aside">
-      <div class="logo">
-        <button class="chatbot-toggler logo">
-          <span>Ask-</span>Bot
-        </button>
-        <div class="chatbot">
-          <header>
-            <h2>Chatbot</h2>
-            <span class="close-btn material-symbols-outlined">close</span>
-          </header>
-          <ul class="chatbox">
-            <li class="chat incoming">
-              <span class="material-symbols-outlined">smart_toy</span>
-              <p>Hi there 👋<br>How can I help you today?</p>
-            </li>
-          </ul>
-          <div class="chat-input">
-            <textarea placeholder="Enter a message..." spellcheck="false" required></textarea>
-            <span id="send-btn" class="material-symbols-rounded">send</span>
+    <title>My Resume</title>
+  </head>
+  <body>
+    <!-- Main Container Start -->
+    <div class="main-container">
+      <!-- Aside Start -->
+      <div class="aside">
+        <div class="logo">
+          <button class="chatbot-toggler logo"><span>Ask-</span>Bot</button>
+          <div class="chatbot">
+            <header>
+              <h2>Chatbot</h2>
+              <span class="close-btn material-symbols-outlined">close</span>
+            </header>
+            <ul class="chatbox">
+              <li class="chat incoming">
+                <span class="material-symbols-outlined">smart_toy</span>
+                <p>Hi there 👋<br />How can I help you today?</p>
+              </li>
+            </ul>
+            <div class="chat-input">
+              <textarea
+                placeholder="Enter a message..."
+                spellcheck="false"
+                required
+              ></textarea>
+              <span id="send-btn" class="material-symbols-rounded">send</span>
+            </div>
           </div>
         </div>
+        <div class="nav-toggler">
+          <span></span>
+        </div>
+        <ul class="nav">
+          <li>
+            <a href="#home" class="active"><i class="fa fa-home"> Home</i></a>
+          </li>
+          <li>
+            <a href="#about"><i class="fa fa-user"> About</i></a>
+          </li>
+          <li>
+            <a href="#service"><i class="fa fa-list"> Service</i></a>
+          </li>
+          <li>
+            <a href="#portfolio"><i class="fa fa-briefcase"> Portfolio</i></a>
+          </li>
+          <li>
+            <a href="#contact"><i class="fa fa-comments"> Contact</i></a>
+          </li>
+        </ul>
       </div>
-      <div class="nav-toggler">
-        <span></span>
-      </div>
-      <ul class="nav">
-        <li><a href="#home" class="active"><i class="fa fa-home"> Home</i></a></li>
-        <li><a href="#about"><i class="fa fa-user"> About</i></a></li>
-        <li><a href="#service"><i class="fa fa-list"> Service</i></a></li>
-        <li><a href="#portfolio"><i class="fa fa-briefcase"> Portfolio</i></a></li>
-        <li><a href="#contact"><i class="fa fa-comments"> Contact</i></a></li>
-      </ul>
-    </div>
-    <!-- Aside End -->
-    <!-- Main Content Start -->
-    <div class="main-content">
-      <!-- Home Section Start -->
-      <section id="home" class="home active section">
-        <div class="container">
-          <div class="row">
-            <div class="home-info padd-15">
-              <h3 class="hello">Hello, my name is <span class="name">Ayush Chauhan</span></h3>
-              <h3 class="my-profession">I'm a <span class="typing">Front-End Developer</span></h3>
-              <p>I'm a Passionate Front-End Developer with a flair for creating seamless, user-friendly web experiences that merge design aesthetics with cutting-edge technology.</p>
-              <a href="#" class="btn">Download CV</a>
-            </div>
-            <div class="home-img padd-15">
-              <img src="Resume\Images\me.jpg" alt="">
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Home Section End -->
-      <!-- About Section Start -->
-      <section id="about" class="about section">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>About Me</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="about-content padd-15">
-              <div class="row">
-                <div class="about-text">
-                  <h3>I'm Ayush Chauhan, <span>A Front-End Developer</span></h3>
-                  <p>I am a BTech student driven by a deep passion for web development, specifically aspiring to become a front-end developer. My academic foundation in technology provides the ideal launchpad for my journey, as I am eager to master languages like HTML, CSS, and JavaScript, among others, to create captivating and user-friendly digital experiences. What truly excites me is the convergence of design and functionality, where I can transform static web pages into dynamic, visually stunning interfaces. With each line of code I write, I am taking steps toward shaping a future where I can craft seamless and engaging online encounters, leaving my mark in the ever-evolving world of front-end development.</p>
-                </div>
+      <!-- Aside End -->
+      <!-- Main Content Start -->
+      <div class="main-content">
+        <!-- Home Section Start -->
+        <section id="home" class="home active section">
+          <div class="container">
+            <div class="row">
+              <div class="home-info padd-15">
+                <h3 class="hello">
+                  Hello, my name is <span class="name">Ayush Chauhan</span>
+                </h3>
+                <h3 class="my-profession">
+                  I'm a <span class="typing">Front-End Developer</span>
+                </h3>
+                <p>
+                  I'm a Passionate Front-End Developer with a flair for creating
+                  seamless, user-friendly web experiences that merge design
+                  aesthetics with cutting-edge technology.
+                </p>
+                <a href="#" class="btn">Download CV</a>
               </div>
-              <div class="row">
-                <div class="personal-info padd-15">
-                  <div class="row">
-                    <div class="info-item padd-15">
-                      <p>Birthday : <span>31 Jan 2004</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Gender : <span>Male</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>LinkedIn : <span>www.linkedin.com/in/ayush-chauhan-25728323a</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Email : <span>ayushc262@gmail.com</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Degree : <span>Btech CST</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>City : <span>Dehradun</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Phone : <span>+91 9870817597</span></p>
-                    </div>
-                    <div class="info-item padd-15">
-                      <p>Freelance : <span>Available</span></p>
-                    </div>
-                  </div>
-                  <div class="row">
-                    <div class="buttons padd-15">
-                      <a href="#contact" data-section-index="1" class="btn hire-me">Hire Me</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="skills padd-15">
-                  <div class="row">
-                    <!-- Skill Item Start -->
-                    <div class="skill-item padd-15">
-                      <h5>HTML</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 90%;"></div>
-                        <div class="skill-percent">90%</div>
-                      </div>
-                    </div>
-                    <!-- Skill Item End -->
-                    <div class="skill-item padd-15">
-                      <h5>CSS</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 90%;"></div>
-                        <div class="skill-percent">90%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>JavaScript</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>C/C++</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 90%;"></div>
-                        <div class="skill-percent">90%</div>
-                      </div>
-                    </div>  
-                    <div class="skill-item padd-15">
-                      <h5>Python</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 80%;"></div>
-                        <div class="skill-percent">80%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Java</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Unity</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 80%;"></div>
-                        <div class="skill-percent">80%</div>
-                      </div>
-                    </div>
-                    <div class="skill-item padd-15">
-                      <h5>Unreal Engine</h5>
-                      <div class="progress">
-                        <div class="progress-in" style="width: 75%;"></div>
-                        <div class="skill-percent">75%</div>
-                      </div>
-                    </div>   
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="education padd-15">
-                  <h3 class="title">Education</h3>
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-                      <div class="timeline boxshadow">
-                        <!-- Timeline Item -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2021 - 2025
-                          </h3>
-                          <h4 class="timeline-title">Bachelor in Computer Science and Technology</h4>
-                          <p class="timeline-text">From Graphic Era Deemed to be University,<br>Clement Town,<br>Dehradun<br><i>Currently Ongoing</i></p>
-                        </div>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2020 - 2021
-                          </h3>
-                          <h4 class="timeline-title">Class 10+2</h4>
-                          <p class="timeline-text">From Delhi Public School,<br>Kalagaon,<br>Dehradun<br><i>Percentage Scored : 91%</i></p>
-                        </div>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2018 - 2019
-                          </h3>
-                          <h4 class="timeline-title">Class 10</h4>
-                          <p class="timeline-text">From Delhi Public School,<br>Kalagaon,<br>Dehradun<br><i>Percentage Scored : 90%</i></p>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="experience padd-15">
-                  <h3 class="title">Certifications</h3>
-                  <div class="row">
-                    <div class="timeline-box padd-15">
-                      <div class="timeline boxshadow">
-                        <!-- Timeline Item Start -->
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2023
-                          </h3>
-                          <h4 class="timeline-title">Introduction to Web Development with HTML, CSS, JavaScript</h4>
-                          <p class="timeline-text">From Coursera<br>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/FXPEWQW5YXSV"><b>Click to View</b></a>
-                          </p>
-                        </div>
-                        <!-- Timeline Item End -->  
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2023
-                          </h3>
-                          <h4 class="timeline-title">Introduction to Software Engineering</h4>
-                          <p class="timeline-text">From Coursera<br>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/GY5EEVGTCPKU"><b>Click to View</b></a>
-                          </p>
-                        </div>
-                        <div class="timeline-item">
-                          <div class="circle-dot"></div>
-                          <h3 class="timeline-date">
-                            <i class="fa fa-calendar"></i> 2023
-                          </h3>
-                          <h4 class="timeline-title">Introduction to C++ Programming and Unreal</h4>
-                          <p class="timeline-text">From Coursera<br>
-                            <a href="https://www.coursera.org/account/accomplishments/certificate/SPP3SLSHTKG8"><b>Click to View</b></a>
-                          </p>
-                        </div>                      
-                      </div>
-                    </div>
-                  </div>
-                </div>
+              <div class="home-img padd-15">
+                <img src="Resume\Images\me.jpg" alt="" />
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- About Section End -->
-      <!-- Service Section Start -->
-      <section id="service" class="service section">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Services</h2>
+        </section>
+        <!-- Home Section End -->
+        <!-- About Section Start -->
+        <section id="about" class="about section">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>About Me</h2>
+              </div>
             </div>
             <div class="row">
-              <!-- Service Item Start -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-code"></i>
+              <div class="about-content padd-15">
+                <div class="row">
+                  <div class="about-text">
+                    <h3>
+                      I'm Ayush Chauhan, <span>A Front-End Developer</span>
+                    </h3>
+                    <p>
+                      I am a BTech student driven by a deep passion for web
+                      development, specifically aspiring to become a front-end
+                      developer. My academic foundation in technology provides
+                      the ideal launchpad for my journey, as I am eager to
+                      master languages like HTML, CSS, and JavaScript, among
+                      others, to create captivating and user-friendly digital
+                      experiences. What truly excites me is the convergence of
+                      design and functionality, where I can transform static web
+                      pages into dynamic, visually stunning interfaces. With
+                      each line of code I write, I am taking steps toward
+                      shaping a future where I can craft seamless and engaging
+                      online encounters, leaving my mark in the ever-evolving
+                      world of front-end development.
+                    </p>
                   </div>
-                  <h4>Website Design</h4>
-                  <p>Need Help in Creating Websites?</p>
                 </div>
-              </div>
-              <!-- Service Item End -->
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-laptop-code"></i>
+                <div class="row">
+                  <div class="personal-info padd-15">
+                    <div class="row">
+                      <div class="info-item padd-15">
+                        <p>Birthday : <span>31 Jan 2004</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Gender : <span>Male</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>
+                          LinkedIn :
+                          <span
+                            >www.linkedin.com/in/ayush-chauhan-25728323a</span
+                          >
+                        </p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Email : <span>ayushc262@gmail.com</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Degree : <span>Btech CST</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>City : <span>Dehradun</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Phone : <span>+91 9870817597</span></p>
+                      </div>
+                      <div class="info-item padd-15">
+                        <p>Freelance : <span>Available</span></p>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="buttons padd-15">
+                        <a
+                          href="#contact"
+                          data-section-index="1"
+                          class="btn hire-me"
+                          >Hire Me</a
+                        >
+                      </div>
+                    </div>
                   </div>
-                  <h4>Web Design</h4>
-                  <p>Need Help in Web Designing?</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-palette"></i>
+                  <div class="skills padd-15">
+                    <div class="row">
+                      <!-- Skill Item Start -->
+                      <div class="skill-item padd-15">
+                        <h5>HTML</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+                      <!-- Skill Item End -->
+                      <div class="skill-item padd-15">
+                        <h5>CSS</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>JavaScript</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 75%"></div>
+                          <div class="skill-percent">75%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>C/C++</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 90%"></div>
+                          <div class="skill-percent">90%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Python</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Java</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 75%"></div>
+                          <div class="skill-percent">75%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Unity</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 80%"></div>
+                          <div class="skill-percent">80%</div>
+                        </div>
+                      </div>
+                      <div class="skill-item padd-15">
+                        <h5>Unreal Engine</h5>
+                        <div class="progress">
+                          <div class="progress-in" style="width: 75%"></div>
+                          <div class="skill-percent">75%</div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h4>UI Design</h4>
-                  <p>Need Help in Improving User Interface?</p>
                 </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-file-code"></i>
+                <div class="row">
+                  <div class="education padd-15">
+                    <h3 class="title">Education</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline boxshadow">
+                          <!-- Timeline Item -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2021 - 2025
+                            </h3>
+                            <h4 class="timeline-title">
+                              Bachelor in Computer Science and Technology
+                            </h4>
+                            <p class="timeline-text">
+                              From Graphic Era Deemed to be University,<br />Clement
+                              Town,<br />Dehradun<br /><i>Currently Ongoing</i>
+                            </p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2020 - 2021
+                            </h3>
+                            <h4 class="timeline-title">Class 10+2</h4>
+                            <p class="timeline-text">
+                              From Delhi Public School,<br />Kalagaon,<br />Dehradun<br /><i
+                                >Percentage Scored : 91%</i
+                              >
+                            </p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2018 - 2019
+                            </h3>
+                            <h4 class="timeline-title">Class 10</h4>
+                            <p class="timeline-text">
+                              From Delhi Public School,<br />Kalagaon,<br />Dehradun<br /><i
+                                >Percentage Scored : 90%</i
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h4>UX Design</h4>
-                  <p>Need Help in Improving User Experience?</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-search"></i>
+                  <div class="experience padd-15">
+                    <h3 class="title">Certifications</h3>
+                    <div class="row">
+                      <div class="timeline-box padd-15">
+                        <div class="timeline boxshadow">
+                          <!-- Timeline Item Start -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2023
+                            </h3>
+                            <h4 class="timeline-title">
+                              Introduction to Web Development with HTML, CSS,
+                              JavaScript
+                            </h4>
+                            <p class="timeline-text">
+                              From Coursera<br />
+                              <a
+                                href="https://www.coursera.org/account/accomplishments/certificate/FXPEWQW5YXSV"
+                                ><b>Click to View</b></a
+                              >
+                            </p>
+                          </div>
+                          <!-- Timeline Item End -->
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2023
+                            </h3>
+                            <h4 class="timeline-title">
+                              Introduction to Software Engineering
+                            </h4>
+                            <p class="timeline-text">
+                              From Coursera<br />
+                              <a
+                                href="https://www.coursera.org/account/accomplishments/certificate/GY5EEVGTCPKU"
+                                ><b>Click to View</b></a
+                              >
+                            </p>
+                          </div>
+                          <div class="timeline-item">
+                            <div class="circle-dot"></div>
+                            <h3 class="timeline-date">
+                              <i class="fa fa-calendar"></i> 2023
+                            </h3>
+                            <h4 class="timeline-title">
+                              Introduction to C++ Programming and Unreal
+                            </h4>
+                            <p class="timeline-text">
+                              From Coursera<br />
+                              <a
+                                href="https://www.coursera.org/account/accomplishments/certificate/SPP3SLSHTKG8"
+                                ><b>Click to View</b></a
+                              >
+                            </p>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                  <h4>Testing</h4>
-                  <p>Need Help in Testing and Debugging?</p>
-                </div>
-              </div>
-              <div class="service-item padd-15">
-                <div class="service-item-inner">
-                  <div class="icon">
-                    <i class="fa fa-gamepad"></i>
-                  </div>
-                  <h4>Game Development</h4>
-                  <p>Need Help in Game Development?</p>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Service Section End -->
-      <!-- Portfolio Section Start -->
-      <section id="portfolio" class="portfolio section">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Portfolio</h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>Clones : </h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Portfolio Item Start -->
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="ChatBot/index.html">
-                    <p class="padd-15">ChatGPT Bot</p>
-                    <img src="Resume\Images\portfolio\chatbot.png" alt="">
-                  </a>
-                </div>
+        </section>
+        <!-- About Section End -->
+        <!-- Service Section Start -->
+        <section id="service" class="service section">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Services</h2>
               </div>
-            </div>
-            
-          </div>
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>Apps : </h2>
-            </div>
-          </div>
-          <div class="row">
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Music-App/index.html">
-                    <p class="padd-15">Music-Player</p>
-                    <img src="Resume\Images\portfolio\music-app.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Weather\index.html">
-                    <p class="padd-15">Weather</p>
-                    <img src="Resume\Images\portfolio\weather.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Calculator\index.html">
-                    <p class="padd-15">Calculator</p>
-                    <img src="Resume\Images\portfolio\calculator.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Conversion\index.html">
-                    <p class="padd-15">Unit Converter</p>
-                    <img src="Resume\Images\portfolio\converter.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="row">
-            <div class="portfolio-heading padd-15">
-              <h2>Games : </h2>
-            </div>
-          </div>
-          <div class="row">
-            <!-- Portfolio Item End -->
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Card-Flip/index.html">
-                    <p class="padd-15">Card-Flip</p>
-                    <img src="Resume\Images\portfolio\card-flip.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Tetris\index.html">
-                    <p class="padd-15">Tetris</p>
-                    <img src="Resume\Images\portfolio\tetris.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-            <div class="portfolio-item padd-15">
-              <div class="portfolio-item-inner shadowdark">
-                <div class="portfolio-img">
-                  <a href="Minesweeper/index.html">
-                    <p class="padd-15">MineSweeper</p>
-                    <img src="Resume\Images\portfolio\minesweeper.png" alt="">
-                  </a>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-      <!-- Portfolio Section End -->
-      <!-- Contact Section Start -->
-      <section id="contact" class="contact section">
-        <div class="container">
-          <div class="row">
-            <div class="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
-          </div>
-          <h3 class="contact-title padd-15">Have Any Questions ?</h3>
-          <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
-          <div class="row">
-            <!-- Contact Info Item Start -->
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fa fa-phone"></i></div>
-              <h4>Call Us On</h4>
-              <p>+91 9870817597</p>
-            </div>
-            <!-- Contact Info Item End -->
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fa fa-envelope"></i></div>
-              <h4>Email</h4>
-              <p>ayushc262@gmail.com</p>
-            </div>
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fab fa-linkedin"></i></div>
-              <h4>LinkedIn</h4>
-              <p>www.linkedin.com/in/ayush-chauhan-25728323a</p>
-            </div>
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fab fa-github"></i></div>
-              <h4>Github</h4>
-              <p>https://github.com/AyushChauhan3757</p>
-            </div>
-            <div class="contact-info-item padd-15">
-              <div class="icon"><i class="fab fa-instagram"></i></div>
-              <h4>Instagram</h4>
-              <p>AyushChauhan3757</p>
-            </div>
-          </div>
-          <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
-          <h4 class="contact-sub-title padd-15">I'M VERY RESPONSIVE TO MESSAGES</h4>
-          <!-- Contact Form -->
-          <div class="row">
-            <div class="contact-form">
               <div class="row">
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Name">
+                <!-- Service Item Start -->
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-code"></i>
+                    </div>
+                    <h4>Website Design</h4>
+                    <p>Need Help in Creating Websites?</p>
                   </div>
                 </div>
-                <div class="form-item col-6 padd-15">
-                  <div class="form-group">
-                    <input type="email" class="form-control" placeholder="Email">
+                <!-- Service Item End -->
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-laptop-code"></i>
+                    </div>
+                    <h4>Web Design</h4>
+                    <p>Need Help in Web Designing?</p>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <input type="text" class="form-control" placeholder="Subject">
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-palette"></i>
+                    </div>
+                    <h4>UI Design</h4>
+                    <p>Need Help in Improving User Interface?</p>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <div class="form-group">
-                    <textarea name="" class="form-control" id="" placeholder="Message"></textarea>
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-file-code"></i>
+                    </div>
+                    <h4>UX Design</h4>
+                    <p>Need Help in Improving User Experience?</p>
                   </div>
                 </div>
-              </div>
-              <div class="row">
-                <div class="form-item col-12 padd-15">
-                  <button type="submit" class="btn">Send Message</button>
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-search"></i>
+                    </div>
+                    <h4>Testing</h4>
+                    <p>Need Help in Testing and Debugging?</p>
+                  </div>
+                </div>
+                <div class="service-item padd-15">
+                  <div class="service-item-inner">
+                    <div class="icon">
+                      <i class="fa fa-gamepad"></i>
+                    </div>
+                    <h4>Game Development</h4>
+                    <p>Need Help in Game Development?</p>
+                  </div>
                 </div>
               </div>
             </div>
           </div>
-        </div>
-      </section>
-      <!-- Contact Section End -->
+        </section>
+        <!-- Service Section End -->
+        <!-- Portfolio Section Start -->
+        <section id="portfolio" class="portfolio section">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Portfolio</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-heading padd-15">
+                <h2>Clones :</h2>
+              </div>
+            </div>
+            <div class="row">
+              <!-- Portfolio Item Start -->
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="ChatBot/index.html">
+                      <p class="padd-15">ChatGPT Bot</p>
+                      <img src="Resume\Images\portfolio\chatbot.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-heading padd-15">
+                <h2>Apps :</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Music-App/index.html">
+                      <p class="padd-15">Music-Player</p>
+                      <img src="Resume\Images\portfolio\music-app.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Weather\index.html">
+                      <p class="padd-15">Weather</p>
+                      <img src="Resume\Images\portfolio\weather.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Calculator\index.html">
+                      <p class="padd-15">Calculator</p>
+                      <img
+                        src="Resume\Images\portfolio\calculator.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Conversion\index.html">
+                      <p class="padd-15">Unit Converter</p>
+                      <img src="Resume\Images\portfolio\converter.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-heading padd-15">
+                <h2>Games :</h2>
+              </div>
+            </div>
+            <div class="row">
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Chess/index.html">
+                      <p class="padd-15">Chess</p>
+                      <img src="Resume\Images\portfolio\chess.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Card-Flip/index.html">
+                      <p class="padd-15">Card-Flip</p>
+                      <img src="Resume\Images\portfolio\card-flip.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Tetris\index.html">
+                      <p class="padd-15">Tetris</p>
+                      <img src="Resume\Images\portfolio\tetris.png" alt="" />
+                    </a>
+                  </div>
+                </div>
+              </div>
+              <div class="portfolio-item padd-15">
+                <div class="portfolio-item-inner shadowdark">
+                  <div class="portfolio-img">
+                    <a href="Minesweeper/index.html">
+                      <p class="padd-15">MineSweeper</p>
+                      <img
+                        src="Resume\Images\portfolio\minesweeper.png"
+                        alt=""
+                      />
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Portfolio Section End -->
+        <!-- Contact Section Start -->
+        <section id="contact" class="contact section">
+          <div class="container">
+            <div class="row">
+              <div class="section-title padd-15">
+                <h2>Contact Me</h2>
+              </div>
+            </div>
+            <h3 class="contact-title padd-15">Have Any Questions ?</h3>
+            <h4 class="contact-sub-title padd-15">I'M AT YOUR SERVICE</h4>
+            <div class="row">
+              <!-- Contact Info Item Start -->
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-phone"></i></div>
+                <h4>Call Us On</h4>
+                <p>+91 9870817597</p>
+              </div>
+              <!-- Contact Info Item End -->
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fa fa-envelope"></i></div>
+                <h4>Email</h4>
+                <p>ayushc262@gmail.com</p>
+              </div>
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fab fa-linkedin"></i></div>
+                <h4>LinkedIn</h4>
+                <p>www.linkedin.com/in/ayush-chauhan-25728323a</p>
+              </div>
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fab fa-github"></i></div>
+                <h4>Github</h4>
+                <p>https://github.com/AyushChauhan3757</p>
+              </div>
+              <div class="contact-info-item padd-15">
+                <div class="icon"><i class="fab fa-instagram"></i></div>
+                <h4>Instagram</h4>
+                <p>AyushChauhan3757</p>
+              </div>
+            </div>
+            <h3 class="contact-title padd-15">SEND ME AN EMAIL</h3>
+            <h4 class="contact-sub-title padd-15">
+              I'M VERY RESPONSIVE TO MESSAGES
+            </h4>
+            <!-- Contact Form -->
+            <div class="row">
+              <div class="contact-form">
+                <div class="row">
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Name"
+                      />
+                    </div>
+                  </div>
+                  <div class="form-item col-6 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="email"
+                        class="form-control"
+                        placeholder="Email"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <input
+                        type="text"
+                        class="form-control"
+                        placeholder="Subject"
+                      />
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <div class="form-group">
+                      <textarea
+                        name=""
+                        class="form-control"
+                        id=""
+                        placeholder="Message"
+                      ></textarea>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="form-item col-12 padd-15">
+                    <button type="submit" class="btn">Send Message</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <!-- Contact Section End -->
+      </div>
+      <!-- Main Content End -->
     </div>
-    <!-- Main Content End -->
-  </div>
-  <!-- Main Container End -->
-  <!-- Style Switcher Start -->
-  <div class="style-switcher">
-    <div class="style-switcher-toggler s-icon">
-      <i class="fas fa-cog fa-spin"></i>
+    <!-- Main Container End -->
+    <!-- Style Switcher Start -->
+    <div class="style-switcher">
+      <div class="style-switcher-toggler s-icon">
+        <i class="fas fa-cog fa-spin"></i>
+      </div>
+      <div class="day-night s-icon">
+        <i class="fas"></i>
+      </div>
+      <h4>Theme Colors</h4>
+      <div class="colors">
+        <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+        <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+        <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+        <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+        <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+      </div>
     </div>
-    <div class="day-night s-icon">
-      <i class="fas "></i>
-    </div>
-    <h4>Theme Colors</h4>
-    <div class="colors">
-      <span class="color-1" onclick="setActiveStyle('color-1')"></span>
-      <span class="color-2" onclick="setActiveStyle('color-2')"></span>
-      <span class="color-3" onclick="setActiveStyle('color-3')"></span>
-      <span class="color-4" onclick="setActiveStyle('color-4')"></span>
-      <span class="color-5" onclick="setActiveStyle('color-5')"></span>
-    </div>
-  </div>
-  <!-- Style Switcher End -->
-  <!-- JS Files -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js" referrerpolicy="no-referrer"></script>
-  <script src="Resume\script.js"></script>
-  <script src="Resume\style-switcher.js"></script>
-</body>
+    <!-- Style Switcher End -->
+    <!-- JS Files -->
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.16/typed.umd.js"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script src="Resume\script.js"></script>
+    <script src="Resume\style-switcher.js"></script>
+  </body>
 </html>
