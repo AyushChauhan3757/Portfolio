@@ -1,58 +1,85 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
+  <head>
+    <!-- Meta tags for character set and responsive design -->
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Link to a Google Fonts stylesheet for the 'Dosis' font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Dosis:wght@800&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Link to an external CSS file for styling -->
+    <link rel="stylesheet" href="style.css" />
+
+    <!-- Title of the HTML document -->
     <title>Calculator</title>
-</head>
-<body>
+  </head>
+  <body>
     <!-- Calculator wrapper -->
     <div class="wrapper">
-        <!-- Display screen for calculator -->
-        <section class="screen">
-            0 <!-- Initial display content -->
-        </section>
-        <!-- Calculator buttons section -->
-        <section class="calc-buttons">
-            <!-- Calculator button rows -->
-            <!-- Row 1 -->
-            <div class="calc-button-row">
-                <button class="calc-button double"> C </button> <!-- Clear button -->
-                <button class="calc-button"> &larr; </button> <!-- Backspace (delete) button -->
-                <button class="calc-button"> &divide; </button> <!-- Division operator button -->
-            </div>
-            <!-- Row 2 -->
-            <div class="calc-button-row">
-                <button class="calc-button"> 7 </button>
-                <button class="calc-button"> 8 </button>
-                <button class="calc-button"> 9 </button>
-                <button class="calc-button"> &times; </button> <!-- Multiplication operator button -->
-            </div>
-            <!-- Row 3 -->
-            <div class="calc-button-row">
-                <button class="calc-button"> 4 </button>
-                <button class="calc-button"> 5 </button>
-                <button class="calc-button"> 6 </button>
-                <button class="calc-button"> &minus; </button> <!-- Subtraction operator button -->
-            </div>
-            <!-- Row 4 -->
-            <div class="calc-button-row">
-                <button class="calc-button"> 1 </button>
-                <button class="calc-button"> 2 </button>
-                <button class="calc-button"> 3 </button>
-                <button class="calc-button"> &plus; </button> <!-- Addition operator button -->
-            </div>
-            <!-- Row 5 -->
-            <div class="calc-button-row">
-                <button class="calc-button triple"> 0 </button> <!-- Zero button -->
-                <button class="calc-button"> &equals; </button> <!-- Equals (calculate) button -->
-            </div>
-        </section>
+      <!-- Display screen for calculator -->
+      <section class="screen">
+        0
+        <!-- Initial display content -->
+      </section>
+
+      <!-- Calculator buttons section -->
+      <section class="calc-buttons">
+        <!-- Calculator button rows -->
+
+        <!-- Row 1: Clear, Backspace, Division -->
+        <div class="calc-button-row">
+          <button class="calc-button double">C</button>
+          <!-- Clear button -->
+          <button class="calc-button">&larr;</button>
+          <!-- Backspace (delete) button -->
+          <button class="calc-button">&divide;</button>
+          <!-- Division operator button -->
+        </div>
+
+        <!-- Row 2: Digits 7, 8, 9, Multiplication -->
+        <div class="calc-button-row">
+          <button class="calc-button">7</button>
+          <button class="calc-button">8</button>
+          <button class="calc-button">9</button>
+          <button class="calc-button">&times;</button>
+          <!-- Multiplication operator button -->
+        </div>
+
+        <!-- Row 3: Digits 4, 5, 6, Subtraction -->
+        <div class="calc-button-row">
+          <button class="calc-button">4</button>
+          <button class="calc-button">5</button>
+          <button class="calc-button">6</button>
+          <button class="calc-button">&minus;</button>
+          <!-- Subtraction operator button -->
+        </div>
+
+        <!-- Row 4: Digits 1, 2, 3, Addition -->
+        <div class="calc-button-row">
+          <button class="calc-button">1</button>
+          <button class="calc-button">2</button>
+          <button class="calc-button">3</button>
+          <button class="calc-button">&plus;</button>
+          <!-- Addition operator button -->
+        </div>
+
+        <!-- Row 5: Digit 0, Decimal Point, Equals -->
+        <div class="calc-button-row">
+          <button class="calc-button double">0</button>
+          <!-- Zero button -->
+          <button class="calc-button">.</button>
+          <!-- Decimal button -->
+          <button class="calc-button">&equals;</button>
+          <!-- Equals (calculate) button -->
+        </div>
+      </section>
     </div>
 
     <!-- JavaScript file for calculator functionality -->
     <script src="script.js"></script>
-</body>
+  </body>
 </html>
