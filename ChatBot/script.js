@@ -45,7 +45,7 @@ function sendMessage() {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json',
-                'Authorization': 'Bearer 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',
+                'Authorization': 'Bearer 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',
             },
             body: JSON.stringify({
                 model: 'gpt-3.5-turbo',
@@ -72,7 +72,7 @@ function sendMessage() {
                     buttonIcon.classList.remove('fas', 'fa-spinner', 'fa-pulse');
                 }
             });
-    }, 5000); // Adjust the delay duration (in milliseconds) as needed
+    }, 2000); // Adjust the delay duration (in milliseconds) as needed
 }
 
 
