@@ -1,5 +1,5 @@
 // Your API key for The Movie Database (TMDb)
-const apiKey = "6bc6e589673c207ba3759b2987208964";
+const apiKey = process.env.movie_api;
 
 // Base URL for movie poster images
 const imgApi = "https://image.tmdb.org/t/p/w1280";
