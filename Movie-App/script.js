@@ -1,5 +1,9 @@
+require('dotenv').config();
+
 // Your API key for The Movie Database (TMDb)
 const apiKey = process.env.movie_api;
+
+console.log("API Key:", apiKey);
 
 // Base URL for movie poster images
 const imgApi = "https://image.tmdb.org/t/p/w1280";
