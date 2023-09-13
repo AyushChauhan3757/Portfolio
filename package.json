@@ -1,7 +1,5 @@
 {
   "dependencies": {
-    "bootstrap": "^5.3.1",
-    "dotenv": "^16.3.1",
-    "react-bootstrap": "^2.8.0"
+    "dotenv": "^16.3.1"
   }
 }
