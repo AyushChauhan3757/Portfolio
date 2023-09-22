@@ -16,6 +16,9 @@
             <input type="number" id="exercise-time" placeholder="Time (minutes)">
             <button id="add-exercise-button">Add Exercise</button>
         </div>
+        <div class="timer-container">
+            <div id="timer-display">00:00:00</div>
+        </div>
         <table id="exercise-list">
             <thead>
                 <tr>
@@ -28,12 +31,11 @@
                 <!-- Default exercises will be added here -->
             </tbody>
         </table>
-        <button id="start-button">Start</button>
-        <button id="stop-button">Stop</button>
-        <button id="reset-button">Reset</button>
-    </div>
-    <div class="timer-container">
-        <div id="timer-display">00:00:00</div>
+        <div class="button-container">
+            <button id="start-button">Start</button>
+            <button id="stop-button">Stop</button>
+            <button id="reset-button">Reset</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>

@@ -1,9 +1,144 @@
-body {
-  font-family: Arial, sans-serif;
+/* Reset some default styles and set up the box model */
+html {
+  box-sizing: border-box;
+  height: 100%;
 }
 
-.timer {
-  font-size: 24px;
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the entire page */
+body {
+  background: linear-gradient(120deg, #f64f59, #c471ed, #12c2e9);
+  display: flex;
+  flex-direction: column;
+  font-family: "Dosis", sans-serif;
+  height: 100vh;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+/* Styling for the title */
+header {
   text-align: center;
+  margin-bottom: 20px;
+}
+
+header h1 {
+  font-size: 36px;
+  color: #fff;
+}
+
+/* Styling for the main container */
+.container {
+  backdrop-filter: blur(4px);
+  background: rgba(255, 255, 255, 0.3);
+  border: 1px solid rgba(255, 255, 255, 0.34);
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(35, 35, 35, 0.1);
+  color: #232323;
+  flex-basis: 400px;
+  height: auto;
+  padding: 20px 35px;
+  text-align: center;
+}
+
+/* Styling for the exercise name and time input */
+.input-container {
+  margin-bottom: 20px;
+}
+
+input[type="text"],
+input[type="number"] {
+  width: 100%;
+  padding: 10px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 16px;
+}
+
+/* Styling for buttons */
+.button-container {
   margin-top: 20px;
+}
+
+button {
+  padding: 10px 20px;
+  margin: 10px;
+  background-color: #d72880;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  font-size: 18px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+/* Hover styles for buttons */
+button:hover {
+  background-color: #ff427f;
+  transform: scale(1.05);
+}
+
+/* Styling for the exercise list table rows */
+#exercise-list tbody tr:hover {
+  background-color: #f4f4f4;
+  cursor: pointer;
+}
+
+/* Styling for the timer container */
+.timer-container {
+  margin-top: 20px;
+}
+
+/* Styling for the timer display */
+#timer-display {
+  font-size: 48px; /* Increased clock size */
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 10px;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+/* Styling for the exercise list */
+#exercise-list {
+  border: 1px solid #ccc;
+  padding: 10px;
+  border-radius: 8px;
+  background-color: #f9f9f9;
+  margin-top: 20px; /* Added margin to center-align the list */
+}
+
+/* Styling for the exercise list table */
+#exercise-list table {
+  width: 100%;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Styling for the exercise list table header */
+#exercise-list thead {
+  background-color: #333;
+  color: white;
+}
+
+/* Styling for table cells */
+#exercise-list td,
+#exercise-list th {
+  padding: 8px 10px;
+  text-align: center;
+}
+
+/* Styling for buttons within the exercise list */
+.remove-button {
+  background-color: #f64f59;
 }
