@@ -88,7 +88,6 @@ function setDefaultExercises() {
             { name: "Distance Training", time: 5 },
             { name: "Scenario Training", time: 5 },
             { name: "Cooldown", time: 2 }
-
         ];
 
         defaultExercises.forEach(exercise => {
