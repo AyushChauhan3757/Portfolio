@@ -95,6 +95,7 @@ function setDefaultExercises() {
     }
 }
 
+
 function addExerciseToList(exercise, index) {
     const exerciseList = document.querySelector("#exercise-list tbody");
     const newRow = exerciseList.insertRow();
@@ -102,17 +103,16 @@ function addExerciseToList(exercise, index) {
         <td>${exercise.name}</td>
         <td>${exercise.time}</td>
         <td>${exercise.time}:00</td>
-        <td><button class="remove-button" data-index="${index}">-</button></td>
+        <td><button class="remove-button">-</button></td>
     `;
 
-    const removeButtons = document.querySelectorAll(".remove-button");
-    removeButtons.forEach(button => {
-        button.addEventListener("click", function() {
-            const indexToRemove = parseInt(this.getAttribute("data-index"));
-            exercises.splice(indexToRemove, 1);
-            updateExerciseList();
-            updateRemainingTimeDisplay();
-        });
+    const removeButton = newRow.querySelector(".remove-button");
+    removeButton.addEventListener("click", function() {
+        // Find the index of the clicked row
+        const clickedRowIndex = Array.from(exerciseList.rows).indexOf(newRow);
+        exercises.splice(clickedRowIndex, 1);
+        updateExerciseList();
+        updateRemainingTimeDisplay();
     });
 }
 
