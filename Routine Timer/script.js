@@ -82,9 +82,13 @@ function setDefaultExercises() {
         exerciseList.innerHTML = "";
 
         const defaultExercises = [
-            { name: "Push-ups", time: 2 },
-            { name: "Plank", time: 3 },
-            { name: "Jumping jacks", time: 2 }
+            { name: "Warm-up", time: 5 },
+            { name: "Vandal Practice ", time: 12 },
+            { name: "Movement and Flick Shots", time: 5 },
+            { name: "Distance Training", time: 5 },
+            { name: "Scenario Training", time: 5 },
+            { name: "Cooldown", time: 2 }
+
         ];
 
         defaultExercises.forEach(exercise => {

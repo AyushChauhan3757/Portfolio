@@ -115,7 +115,9 @@ button:hover {
   padding: 10px;
   border-radius: 8px;
   background-color: #f9f9f9;
-  margin-top: 20px; /* Added margin to center-align the list */
+  margin: 0 auto;
+  max-width: 400px;
+  margin-top: 20px;
 }
 
 /* Styling for the exercise list table */
@@ -141,4 +143,28 @@ button:hover {
 /* Styling for buttons within the exercise list */
 .remove-button {
   background-color: #f64f59;
+}
+
+/* Responsive styles */
+@media screen and (max-width: 600px) {
+  header h1 {
+    font-size: 24px; /* Decreased font size for smaller screens */
+  }
+
+  .container {
+    padding: 10px; /* Reduced padding for smaller screens */
+  }
+
+  input[type="text"],
+  input[type="number"] {
+    font-size: 14px; /* Decreased font size for input fields */
+  }
+
+  button {
+    font-size: 16px; /* Decreased font size for buttons */
+  }
+
+  #timer-display {
+    font-size: 36px; /* Decreased clock size for smaller screens */
+  }
 }
