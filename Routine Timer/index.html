@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Routine Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Exercise Routine Timer</h1>
+    </header>
+    <div class="container">
+        <div class="input-container">
+            <input type="text" id="exercise-name" placeholder="Exercise Name">
+            <input type="number" id="exercise-time" placeholder="Time (minutes)">
+            <button id="add-exercise-button">Add Exercise</button>
+        </div>
+        <table id="exercise-list">
+            <thead>
+                <tr>
+                    <th>Exercise Name</th>
+                    <th>Time (min)</th>
+                    <th>Remaining Time</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- Default exercises will be added here -->
+            </tbody>
+        </table>
+        <button id="start-button">Start</button>
+        <button id="stop-button">Stop</button>
+        <button id="reset-button">Reset</button>
+    </div>
+    <div class="timer-container">
+        <div id="timer-display">00:00:00</div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
