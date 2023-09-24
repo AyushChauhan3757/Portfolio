@@ -35,14 +35,9 @@ function playSound() {
 function startTimer() {
     if (currentExerciseIndex < exercises.length) {
         isTimerRunning = true; // Timer is running
-        const currentExercise = exercises[currentExerciseIndex];
-        remainingTime = remainingTime || currentExercise.time * 60; // Use remainingTime if it's set
-        updateRemainingTimeDisplay();
-        updateTimerDisplay(totalElapsedSeconds);
 
         timer = setInterval(function() {
             if (remainingTime <= 0) {
-                playSound();
                 currentExerciseIndex++;
 
                 if (currentExerciseIndex > 0) {
@@ -51,7 +46,8 @@ function startTimer() {
                 }
 
                 if (currentExerciseIndex < exercises.length) {
-                    remainingTime = exercises[currentExerciseIndex].time * 60;
+                    const nextExercise = exercises[currentExerciseIndex];
+                    remainingTime = nextExercise.time * 60;
                     const currentRow = document.querySelectorAll('tr')[currentExerciseIndex + 1];
                     currentRow.classList.add('current-task');
                     updateRemainingTimeDisplay();
@@ -59,15 +55,17 @@ function startTimer() {
                     clearInterval(timer);
                     updateRemainingTimeDisplay();
                     updateTimerDisplay(totalElapsedSeconds);
-                    playSound();
+                    playSound(); // Play sound at the end of the last exercise
                     isTimerRunning = false; // Timer is not running
                     return;
                 }
-            } else {
-                remainingTime--;
-                totalElapsedSeconds++;
+            } else if (remainingTime <= 5) {
+                // Play the beep sound 5 seconds before the end of the exercise
+                playSound();
             }
 
+            remainingTime--;
+            totalElapsedSeconds++;
             updateRemainingTimeDisplay();
             updateTimerDisplay(totalElapsedSeconds);
         }, 1000);
