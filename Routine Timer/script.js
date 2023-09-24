@@ -150,6 +150,7 @@ document.getElementById("add-exercise-button").addEventListener("click", functio
 
 document.getElementById("start-button").addEventListener("click", function() {
     if (!isTimerRunning) {
+        pausedTime = 0; // Reset paused time
         if (pausedTime > 0) {
             // Resume timer from where it was stopped
             remainingTime = pausedTime;
@@ -173,7 +174,7 @@ document.getElementById("stop-button").addEventListener("click", function() {
 document.getElementById("reset-button").addEventListener("click", function() {
     clearInterval(timer);
     isTimerRunning = false; // Timer is not running
-    currentExerciseIndex = 0;
+    currentExerciseIndex = 0; // Reset current exercise index to zero
     totalElapsedSeconds = 0;
     remainingTime = 0; // Immediately reset remaining time
     updateRemainingTimeDisplay();
